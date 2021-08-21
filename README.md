@@ -44,4 +44,4 @@ For instance, here body.onclick doesn’t work if you click on <button>:
   <button onclick="event.stopPropagation()">Click me</button>
 </body>
   
-  
+  🎲Handlers added using on<event>-property or using HTML attributes or using two-argument addEventListener(event, handler) don’t know anything about capturing, they only run on the 2nd and 3rd phases.
