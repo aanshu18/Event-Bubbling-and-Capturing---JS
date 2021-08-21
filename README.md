@@ -12,3 +12,6 @@ trickle down, bubble up
 
 🎲We can use the addEventListener(type, listener, useCapture) to register event handlers for in either bubbling (default) or capturing mode. To use the capturing model pass the third argument as true.
 
+Events first are captured down to deepest target, then bubble up. In IE<9 they only bubble.
+All handlers work on bubbling stage excepts addEventListener with last argument true, which is the only way to catch the event on capturing stage.
+Bubbling/capturing can be stopped by event.cancelBubble=true (IE) or event.stopPropagation() for other browsers.
