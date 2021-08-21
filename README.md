@@ -1,4 +1,5 @@
 # Event-Bubbling-and-Capturing---JS
+  https://javascript.info/bubbling-and-capturing
 
 🎲Event bubbling and capturing are two ways of event propagation in the HTML DOM API, when an event occurs in an element inside another element, and both elements have registered a handle for that event. The event propagation mode determines in which order the elements receive the event.
 
@@ -42,3 +43,5 @@ For instance, here body.onclick doesn’t work if you click on <button>:
 <body onclick="alert(`the bubbling doesn't reach here`)">
   <button onclick="event.stopPropagation()">Click me</button>
 </body>
+  
+  
