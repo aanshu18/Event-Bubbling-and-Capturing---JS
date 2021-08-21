@@ -32,3 +32,13 @@ For instance, if we have a single handler form.onclick, then it can “catch” 
 In form.onclick handler:
 this (=event.currentTarget) is the <form> element, because the handler runs on it.
 event.target is the actual element inside the form that was clicked.
+
+  
+🎲Stopping bubbling
+A bubbling event goes from the target element straight up. Normally it goes upwards till <html>, and then to document object, and some events even reach window, calling all handlers on the path.
+But any handler may decide that the event has been fully processed and stop the bubbling.
+The method for it is event.stopPropagation().
+For instance, here body.onclick doesn’t work if you click on <button>:
+<body onclick="alert(`the bubbling doesn't reach here`)">
+  <button onclick="event.stopPropagation()">Click me</button>
+</body>
