@@ -15,3 +15,7 @@ trickle down, bubble up
 Events first are captured down to deepest target, then bubble up. In IE<9 they only bubble.
 All handlers work on bubbling stage excepts addEventListener with last argument true, which is the only way to catch the event on capturing stage.
 Bubbling/capturing can be stopped by event.cancelBubble=true (IE) or event.stopPropagation() for other browsers.
+
+
+Almost all events bubble.
+For instance, a focus event does not bubble. There are other examples too, we’ll meet them. But still it’s an exception, rather than a rule, most events do bubble.
