@@ -45,3 +45,8 @@ For instance, here body.onclick doesn’t work if you click on <button>:
 </body>
   
   🎲Handlers added using on<event>-property or using HTML attributes or using two-argument addEventListener(event, handler) don’t know anything about capturing, they only run on the 2nd and 3rd phases.
+  The standard DOM Events describes 3 phases of event propagation:
+Capturing phase – the event goes down to the element.
+Target phase – the event reached the target element.
+Bubbling phase – the event bubbles up from the element.
+
